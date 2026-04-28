@@ -1,0 +1,36 @@
+# Data Collection
+yfinance==0.2.54
+pandas==2.2.3
+numpy==1.26.4
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# Database
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# Configuration
+pydantic-settings==2.7.0
+python-dotenv==1.0.1
+
+# Scheduling / Async
+celery==5.4.0
+redis==5.2.1
+
+# Utilities
+tenacity==9.0.0
+loguru==0.7.3
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-mock==3.14.0
+
+# Phase 2+
+ta
+xgboost==2.1.3
+scikit-learn==1.6.1
+optuna==4.1.0
+shap==0.46.0
