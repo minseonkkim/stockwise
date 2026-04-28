@@ -1014,3 +1014,77 @@
 2026-04-28 14:48:43.055 | INFO     | __main__:main:145 -   모델: data/models/xgb_model.json
 2026-04-28 14:48:43.056 | INFO     | __main__:main:146 -   평가: data/reports/evaluation.json
 2026-04-28 14:48:43.056 | INFO     | __main__:main:147 - ============================================================
+2026-04-28 15:03:07.662 | INFO     | __main__:main:35 - ============================================================
+2026-04-28 15:03:07.663 | INFO     | __main__:main:36 - Phase 4: 백테스트 시작
+2026-04-28 15:03:07.663 | INFO     | __main__:main:37 - ============================================================
+2026-04-28 15:03:07.663 | INFO     | __main__:main:38 -   전략: 상위 20개 종목 / 주간 리밸런싱 / 거래비용 0.1%
+2026-04-28 15:03:07.663 | INFO     | __main__:main:39 -   자본: $100,000 | 데이터: test
+2026-04-28 15:03:07.663 | INFO     | __main__:main:42 - [1/4] 모델 예측 생성 중...
+2026-04-28 15:03:07.663 | INFO     | src.backtest.predictor:generate_predictions:26 - 예측 생성 중... (model=xgb_model, split=test)
+2026-04-28 15:03:07.688 | INFO     | src.models.trainer:load:124 - Model loaded ← data\models\xgb_model.pkl
+2026-04-28 15:03:08.949 | INFO     | src.backtest.predictor:generate_predictions:59 - 예측 완료: 413,351행 | 503개 종목 | 2023-01-03 ~ 2026-04-20
+2026-04-28 15:03:09.021 | INFO     | __main__:main:45 -   예측 건수: 413,351 | 평균 확률: 0.4976 | 중앙값: 0.4984
+2026-04-28 15:03:09.021 | INFO     | __main__:main:50 - [2/4] 포트폴리오 시뮬레이션 중...
+2026-04-28 15:03:09.472 | INFO     | src.backtest.simulator:run:104 - 백테스트 완료: 173주 | 평균 주간 수익률: 0.0079
+2026-04-28 15:03:09.473 | INFO     | __main__:main:60 -   리밸런싱 횟수: 173회
+2026-04-28 15:03:09.474 | INFO     | __main__:main:61 -   평균 주간 수익률(세전): +0.0093
+2026-04-28 15:03:09.474 | INFO     | __main__:main:62 -   평균 주간 수익률(세후): +0.0079
+2026-04-28 15:03:09.474 | INFO     | __main__:main:63 -   평균 턴오버: 68.55%
+2026-04-28 15:03:09.474 | INFO     | __main__:main:66 - [3/4] 성과 분석 중...
+2026-04-28 15:03:09.475 | INFO     | src.backtest.reporter:fetch_benchmark:33 - 벤치마크 다운로드: SPY (2023-01-03 ~ 2026-04-20)
+2026-04-28 15:04:19.368 | INFO     | __main__:main:35 - ============================================================
+2026-04-28 15:04:19.368 | INFO     | __main__:main:36 - Phase 4: 백테스트 시작
+2026-04-28 15:04:19.368 | INFO     | __main__:main:37 - ============================================================
+2026-04-28 15:04:19.368 | INFO     | __main__:main:38 -   전략: 상위 20개 종목 / 주간 리밸런싱 / 거래비용 0.1%
+2026-04-28 15:04:19.368 | INFO     | __main__:main:39 -   자본: $100,000 | 데이터: test
+2026-04-28 15:04:19.370 | INFO     | __main__:main:42 - [1/4] 모델 예측 생성 중...
+2026-04-28 15:04:19.370 | INFO     | src.backtest.predictor:generate_predictions:26 - 예측 생성 중... (model=xgb_model, split=test)
+2026-04-28 15:04:19.377 | INFO     | src.models.trainer:load:124 - Model loaded ← data\models\xgb_model.pkl
+2026-04-28 15:04:20.495 | INFO     | src.backtest.predictor:generate_predictions:59 - 예측 완료: 413,351행 | 503개 종목 | 2023-01-03 ~ 2026-04-20
+2026-04-28 15:04:20.557 | INFO     | __main__:main:45 -   예측 건수: 413,351 | 평균 확률: 0.4976 | 중앙값: 0.4984
+2026-04-28 15:04:20.557 | INFO     | __main__:main:50 - [2/4] 포트폴리오 시뮬레이션 중...
+2026-04-28 15:04:20.886 | INFO     | src.backtest.simulator:run:104 - 백테스트 완료: 173주 | 평균 주간 수익률: 0.0079
+2026-04-28 15:04:20.887 | INFO     | __main__:main:60 -   리밸런싱 횟수: 173회
+2026-04-28 15:04:20.887 | INFO     | __main__:main:61 -   평균 주간 수익률(세전): +0.0093
+2026-04-28 15:04:20.887 | INFO     | __main__:main:62 -   평균 주간 수익률(세후): +0.0079
+2026-04-28 15:04:20.887 | INFO     | __main__:main:63 -   평균 턴오버: 68.55%
+2026-04-28 15:04:20.887 | INFO     | __main__:main:66 - [3/4] 성과 분석 중...
+2026-04-28 15:04:20.887 | INFO     | src.backtest.reporter:fetch_benchmark:33 - 벤치마크 다운로드: SPY (2023-01-03 ~ 2026-04-20)
+2026-04-28 15:04:22.403 | INFO     | src.backtest.reporter:save_json:136 - 백테스트 결과 저장 -> data\reports\backtest_result.json
+2026-04-28 15:04:22.403 | INFO     | __main__:main:74 - [4/4] 리포트 저장 중...
+2026-04-28 15:04:22.409 | INFO     | __main__:main:82 -   주간 수익률 -> data\reports\backtest_weekly.csv
+2026-04-28 15:04:22.412 | INFO     | __main__:main:87 -   일별 수익률 -> data\reports\backtest_daily_returns.csv
+2026-04-28 15:04:22.412 | INFO     | __main__:main:92 - ============================================================
+2026-04-28 15:04:22.412 | INFO     | __main__:main:93 - Phase 4 완료
+2026-04-28 15:04:22.412 | INFO     | __main__:main:94 -   결과: data/reports/backtest_result.json
+2026-04-28 15:04:22.412 | INFO     | __main__:main:95 -   주간: data/reports/backtest_weekly.csv
+2026-04-28 15:04:22.412 | INFO     | __main__:main:98 - ============================================================
+2026-04-28 15:06:06.055 | INFO     | __main__:main:35 - ============================================================
+2026-04-28 15:06:06.055 | INFO     | __main__:main:36 - Phase 4: 백테스트 시작
+2026-04-28 15:06:06.055 | INFO     | __main__:main:37 - ============================================================
+2026-04-28 15:06:06.056 | INFO     | __main__:main:38 -   전략: 상위 20개 종목 / 주간 리밸런싱 / 거래비용 0.1%
+2026-04-28 15:06:06.056 | INFO     | __main__:main:39 -   자본: $100,000 | 데이터: test
+2026-04-28 15:06:06.056 | INFO     | __main__:main:42 - [1/4] 모델 예측 생성 중...
+2026-04-28 15:06:06.056 | INFO     | src.backtest.predictor:generate_predictions:26 - 예측 생성 중... (model=xgb_model, split=test)
+2026-04-28 15:06:06.062 | INFO     | src.models.trainer:load:124 - Model loaded ← data\models\xgb_model.pkl
+2026-04-28 15:06:07.114 | INFO     | src.backtest.predictor:generate_predictions:59 - 예측 완료: 413,351행 | 503개 종목 | 2023-01-03 ~ 2026-04-20
+2026-04-28 15:06:07.150 | INFO     | __main__:main:45 -   예측 건수: 413,351 | 평균 확률: 0.4976 | 중앙값: 0.4984
+2026-04-28 15:06:07.150 | INFO     | __main__:main:50 - [2/4] 포트폴리오 시뮬레이션 중...
+2026-04-28 15:06:07.511 | INFO     | src.backtest.simulator:run:104 - 백테스트 완료: 173주 | 평균 주간 수익률: 0.0079
+2026-04-28 15:06:07.513 | INFO     | __main__:main:60 -   리밸런싱 횟수: 173회
+2026-04-28 15:06:07.513 | INFO     | __main__:main:61 -   평균 주간 수익률(세전): +0.0093
+2026-04-28 15:06:07.513 | INFO     | __main__:main:62 -   평균 주간 수익률(세후): +0.0079
+2026-04-28 15:06:07.513 | INFO     | __main__:main:63 -   평균 턴오버: 68.55%
+2026-04-28 15:06:07.514 | INFO     | __main__:main:66 - [3/4] 성과 분석 중...
+2026-04-28 15:06:07.514 | INFO     | src.backtest.reporter:fetch_benchmark:33 - 벤치마크 다운로드: SPY (2023-01-03 ~ 2026-04-20)
+2026-04-28 15:06:08.740 | INFO     | src.backtest.reporter:save_json:136 - 백테스트 결과 저장 -> data\reports\backtest_result.json
+2026-04-28 15:06:08.740 | INFO     | __main__:main:74 - [4/4] 리포트 저장 중...
+2026-04-28 15:06:08.744 | INFO     | __main__:main:82 -   주간 수익률 -> data\reports\backtest_weekly.csv
+2026-04-28 15:06:08.746 | INFO     | __main__:main:87 -   일별 수익률 -> data\reports\backtest_daily_returns.csv
+2026-04-28 15:06:11.725 | INFO     | src.backtest.reporter:save_quantstats_report:167 - Quantstats HTML 리포트 저장 -> data\reports\backtest_qs.html
+2026-04-28 15:06:11.725 | INFO     | __main__:main:92 - ============================================================
+2026-04-28 15:06:11.725 | INFO     | __main__:main:93 - Phase 4 완료
+2026-04-28 15:06:11.725 | INFO     | __main__:main:94 -   결과: data/reports/backtest_result.json
+2026-04-28 15:06:11.725 | INFO     | __main__:main:95 -   주간: data/reports/backtest_weekly.csv
+2026-04-28 15:06:11.725 | INFO     | __main__:main:97 -   HTML: data/reports/backtest_qs.html
+2026-04-28 15:06:11.725 | INFO     | __main__:main:98 - ============================================================

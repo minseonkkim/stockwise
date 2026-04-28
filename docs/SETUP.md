@@ -171,7 +171,52 @@ python scripts/train_model.py --retrain-after-shap
 
 ---
 
-## 9. 테스트 실행
+## 9. 백테스트 (Phase 4 — 수분 소요)
+
+```bash
+python scripts/run_backtest.py
+```
+
+XGBoost 예측 확률 상위 20개 종목 / 주간 리밸런싱 / 거래비용 0.2%(왕복) 전략을 테스트 기간 전체에 대해 시뮬레이션합니다.
+
+완료 후 생성 파일:
+
+```
+data/reports/
+├── backtest_result.json        # CAGR, 샤프, MDD, 승률 등 성과 지표
+├── backtest_weekly.csv         # 주간 수익률 및 턴오버
+├── backtest_daily_returns.csv  # 일별 포트폴리오 수익률
+└── backtest_qs.html            # Quantstats 풀 HTML 리포트 (선택)
+```
+
+주요 옵션:
+
+```bash
+# 상위 30개 종목으로 실행
+python scripts/run_backtest.py --n-top 30
+
+# 검증 기간(2021~2022)으로 백테스트
+python scripts/run_backtest.py --split valid
+
+# Quantstats HTML 리포트 생략 (quantstats 미설치 시)
+python scripts/run_backtest.py --no-qs
+
+# 초기 자본·거래비용 직접 지정
+python scripts/run_backtest.py --capital 50000 --cost 0.002
+```
+
+성능 목표:
+
+| 지표             | 목표 기준       |
+| ---------------- | --------------- |
+| 연 수익률 (CAGR) | S&P 500 (SPY) 초과 |
+| 샤프 비율        | 1.0 이상        |
+| 최대 낙폭 (MDD)  | 20% 이내        |
+| 승률             | 50% 이상        |
+
+---
+
+## 10. 테스트 실행
 
 ```bash
 pytest tests/ -v
@@ -205,6 +250,7 @@ stockwise/
 │   ├── data_collection/# yfinance 수집, S&P500 유니버스, 검증
 │   ├── features/       # 차트 기법 피처, 수치 피처, 파이프라인
 │   ├── models/         # XGBoost 트레이너, Optuna 튜너, 평가, SHAP
+│   ├── backtest/       # Phase 4: 예측 생성, 시뮬레이터, 성과 지표, 리포터
 │   └── utils/          # 로거
 ├── airflow/dags/       # Airflow DAG
 ├── docker/             # docker-compose.yml
@@ -213,7 +259,7 @@ stockwise/
 ├── data/
 │   ├── features/       # Phase 2 피처 데이터
 │   ├── models/         # Phase 3 학습된 모델 (git 제외)
-│   └── reports/        # Phase 3 평가 리포트 (git 제외)
+│   └── reports/        # Phase 3·4 평가 리포트 (git 제외)
 └── requirements.txt
 ```
 
@@ -283,4 +329,24 @@ pip install matplotlib
 ```python
 import optuna
 optuna.logging.set_verbosity(optuna.logging.WARNING)
+```
+
+### quantstats 설치 오류
+
+```bash
+pip install quantstats
+```
+
+설치가 어려울 경우 `--no-qs` 옵션으로 HTML 리포트를 생략하고 실행할 수 있습니다.
+
+```bash
+python scripts/run_backtest.py --no-qs
+```
+
+### 백테스트 실행 시 "모델 파일 없음" 오류
+
+Phase 3 학습이 완료되어야 합니다. `data/models/xgb_model.json` 파일이 있는지 확인하세요.
+
+```bash
+python scripts/train_model.py
 ```
