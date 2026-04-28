@@ -22,6 +22,7 @@ redis==5.2.1
 # Utilities
 tenacity==9.0.0
 loguru==0.7.3
+pyarrow
 
 # Testing
 pytest==8.3.4

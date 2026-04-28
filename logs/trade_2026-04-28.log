@@ -531,3 +531,42 @@
 2026-04-28 11:01:59.886 | DEBUG    | src.data_collection.collector:_collect_single:122 - ZTS: inserted=3328, updated=0
 2026-04-28 11:02:00.187 | INFO     | src.data_collection.collector:collect_all:57 - Collection complete — success=503, failed=0, skipped=0
 2026-04-28 11:02:00.187 | INFO     | __main__:main:27 - 완료: {'success': 503, 'failed': 0, 'skipped': 0}
+2026-04-28 11:20:30.730 | INFO     | __main__:main:28 - === Phase 2: Feature Engineering 시작 ===
+2026-04-28 11:20:30.731 | INFO     | __main__:main:31 - 1. 피처 계산 중...
+2026-04-28 11:20:30.754 | INFO     | src.features.pipeline:build_all_features:47 - Building features for 503 tickers
+2026-04-28 11:20:49.868 | INFO     | src.features.pipeline:build_all_features:62 -   50/503 tickers processed
+2026-04-28 11:21:09.016 | INFO     | src.features.pipeline:build_all_features:62 -   100/503 tickers processed
+2026-04-28 11:21:27.407 | INFO     | src.features.pipeline:build_all_features:62 -   150/503 tickers processed
+2026-04-28 11:21:51.633 | INFO     | src.features.pipeline:build_all_features:62 -   200/503 tickers processed
+2026-04-28 11:22:17.406 | INFO     | src.features.pipeline:build_all_features:62 -   250/503 tickers processed
+2026-04-28 11:22:43.566 | INFO     | src.features.pipeline:build_all_features:62 -   300/503 tickers processed
+2026-04-28 11:23:11.406 | INFO     | src.features.pipeline:build_all_features:62 -   350/503 tickers processed
+2026-04-28 11:23:38.318 | INFO     | src.features.pipeline:build_all_features:62 -   400/503 tickers processed
+2026-04-28 11:24:04.644 | INFO     | src.features.pipeline:build_all_features:62 -   450/503 tickers processed
+2026-04-28 11:24:29.900 | INFO     | src.features.pipeline:build_all_features:62 -   500/503 tickers processed
+2026-04-28 11:24:31.764 | INFO     | src.features.pipeline:build_all_features:72 - Feature build complete: 1,943,565 rows, 503 tickers, 0 failed
+2026-04-28 11:24:31.826 | INFO     | __main__:main:35 - 2. features_all.parquet 저장 중...
+2026-04-28 11:30:52.163 | INFO     | __main__:main:28 - === Phase 2: Feature Engineering 시작 ===
+2026-04-28 11:30:52.164 | INFO     | __main__:main:31 - 1. 피처 계산 중...
+2026-04-28 11:30:52.197 | INFO     | src.features.pipeline:build_all_features:47 - Building features for 503 tickers
+2026-04-28 11:31:11.802 | INFO     | src.features.pipeline:build_all_features:62 -   50/503 tickers processed
+2026-04-28 11:31:31.823 | INFO     | src.features.pipeline:build_all_features:62 -   100/503 tickers processed
+2026-04-28 11:31:58.278 | INFO     | src.features.pipeline:build_all_features:62 -   150/503 tickers processed
+2026-04-28 11:32:17.752 | INFO     | src.features.pipeline:build_all_features:62 -   200/503 tickers processed
+2026-04-28 11:32:39.760 | INFO     | src.features.pipeline:build_all_features:62 -   250/503 tickers processed
+2026-04-28 11:33:08.624 | INFO     | src.features.pipeline:build_all_features:62 -   300/503 tickers processed
+2026-04-28 11:33:28.254 | INFO     | src.features.pipeline:build_all_features:62 -   350/503 tickers processed
+2026-04-28 11:33:52.872 | INFO     | src.features.pipeline:build_all_features:62 -   400/503 tickers processed
+2026-04-28 11:34:21.317 | INFO     | src.features.pipeline:build_all_features:62 -   450/503 tickers processed
+2026-04-28 11:34:39.990 | INFO     | src.features.pipeline:build_all_features:62 -   500/503 tickers processed
+2026-04-28 11:34:41.401 | INFO     | src.features.pipeline:build_all_features:72 - Feature build complete: 1,943,565 rows, 503 tickers, 0 failed
+2026-04-28 11:34:41.451 | INFO     | __main__:main:35 - 2. features_all.parquet 저장 중...
+2026-04-28 11:34:43.270 | INFO     | src.features.pipeline:save_features:84 - Saved 1,943,565 rows to data\features\features_all.parquet
+2026-04-28 11:34:43.270 | INFO     | __main__:main:40 - 3. 데이터셋 분리 및 스케일링 중...
+2026-04-28 11:34:44.395 | INFO     | src.features.dataset:build_dataset:59 - Split sizes — train: 1,278,771, valid: 248,928, test: 413,351
+2026-04-28 11:34:48.079 | INFO     | src.features.dataset:save_dataset:115 - Dataset saved to data\features/
+2026-04-28 11:34:48.084 | INFO     | __main__:main:44 -    train: 1,278,771행
+2026-04-28 11:34:48.085 | INFO     | __main__:main:45 -    valid: 248,928행
+2026-04-28 11:34:48.085 | INFO     | __main__:main:46 -    test : 413,351행
+2026-04-28 11:34:48.085 | INFO     | __main__:main:47 -    피처 수: 38개
+2026-04-28 11:34:48.085 | INFO     | __main__:main:50 - === Phase 2 완료 (3.9분) ===
