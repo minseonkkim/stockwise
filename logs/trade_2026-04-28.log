@@ -570,3 +570,447 @@
 2026-04-28 11:34:48.085 | INFO     | __main__:main:46 -    test : 413,351행
 2026-04-28 11:34:48.085 | INFO     | __main__:main:47 -    피처 수: 38개
 2026-04-28 11:34:48.085 | INFO     | __main__:main:50 - === Phase 2 완료 (3.9분) ===
+2026-04-28 14:17:10.080 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.284 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.304 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.327 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.383 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 5 trials
+2026-04-28 14:17:10.433 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 5 trials
+2026-04-28 14:17:10.465 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.532 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.553 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.578 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:17:10.600 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.04 (neg=51, pos=49)
+2026-04-28 14:17:10.661 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.17 (neg=54, pos=46)
+2026-04-28 14:18:00.087 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:00.213 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:00.215 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:00.279 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:00.282 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:00.345 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:00.352 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:00.416 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:00.421 | INFO     | src.models.trainer:save:108 - Model saved → C:\Users\ThinkBook\AppData\Local\Temp\pytest-of-ThinkBook\pytest-1\test_save_and_load0\test_model.json
+2026-04-28 14:18:00.683 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 5 trials
+2026-04-28 14:18:01.043 | INFO     | src.models.tuner:optimize:99 - Best trial #0: valid_acc=0.92, train_acc=0.9533, gap=0.0333
+2026-04-28 14:18:01.043 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 287, 'max_depth': 8, 'learning_rate': 0.1205712628744377, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'min_child_weight': 2, 'gamma': 0.05808361216819946, 'reg_alpha': 2.1423021757741068, 'reg_lambda': 0.10129197956845731}
+2026-04-28 14:18:01.047 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 5 trials
+2026-04-28 14:18:01.424 | INFO     | src.models.tuner:optimize:99 - Best trial #0: valid_acc=0.92, train_acc=0.9533, gap=0.0333
+2026-04-28 14:18:01.424 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 287, 'max_depth': 8, 'learning_rate': 0.1205712628744377, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'min_child_weight': 2, 'gamma': 0.05808361216819946, 'reg_alpha': 2.1423021757741068, 'reg_lambda': 0.10129197956845731}
+2026-04-28 14:18:01.426 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:01.493 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:01.499 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:01.501 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:01.570 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:01.576 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:01.577 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:01.643 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:01.649 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.9480 | prec=0.9344 | rec=0.9580 | f1=0.9461 | auc=0.993
+2026-04-28 14:18:01.654 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:01.660 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:01.660 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:18:01.660 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:18:01.660 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.8720 → ✓ PASS
+2026-04-28 14:18:01.661 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0760 → ✗ FAIL
+2026-04-28 14:18:01.661 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:18:01.661 | WARNING  | src.models.evaluator:_check_phase3_criteria:112 - 과적합 gap이 5%를 초과했습니다. 정규화 강화 또는 early stopping을 조정하세요.
+2026-04-28 14:18:01.666 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:01.736 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:01.742 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:01.742 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → C:\Users\ThinkBook\AppData\Local\Temp\pytest-of-ThinkBook\pytest-1\test_save_report0\test_eval.json
+2026-04-28 14:18:01.744 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.04 (neg=51, pos=49)
+2026-04-28 14:18:01.821 | INFO     | src.models.trainer:train:75 - Train acc: 0.8900 | Valid acc: 0.8500 | Gap: 0.0400
+2026-04-28 14:18:01.823 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 100 → 50행
+2026-04-28 14:18:01.823 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:18:01.842 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:18:01.847 | INFO     | src.models.explainer:fit_transform:83 - 하위 20% 제거 후보 (1개): ['feat_4']
+2026-04-28 14:18:01.847 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:18:01.847 | INFO     | src.models.explainer:_log_top_features:96 -    1. feat_0                         1.93410 ████████████████████
+2026-04-28 14:18:01.847 | INFO     | src.models.explainer:_log_top_features:96 -    2. feat_1                         0.86070 ████████
+2026-04-28 14:18:01.847 | INFO     | src.models.explainer:_log_top_features:96 -    3. feat_3                         0.15960 █
+2026-04-28 14:18:01.848 | INFO     | src.models.explainer:_log_top_features:96 -    4. feat_2                         0.15543 █
+2026-04-28 14:18:01.848 | INFO     | src.models.explainer:_log_top_features:96 -    5. feat_4                         0.02639 
+2026-04-28 14:18:01.849 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.17 (neg=54, pos=46)
+2026-04-28 14:18:01.887 | INFO     | src.models.trainer:train:75 - Train acc: 0.9200 | Valid acc: 0.8000 | Gap: 0.1200
+2026-04-28 14:18:01.888 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 100 → 50행
+2026-04-28 14:18:01.888 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:18:01.894 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:fit_transform:83 - 하위 10% 제거 후보 (6개): ['feat_4', 'feat_3', 'feat_5', 'feat_7', 'feat_8', 'feat_9']
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:_log_top_features:96 -    1. feat_0                         1.84936 ████████████████████
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:_log_top_features:96 -    2. feat_1                         0.25419 ██
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:_log_top_features:96 -    3. feat_2                         0.14009 █
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:_log_top_features:96 -    4. feat_6                         0.05596 
+2026-04-28 14:18:01.898 | INFO     | src.models.explainer:_log_top_features:96 -    5. feat_4                         0.00000 
+2026-04-28 14:18:01.899 | INFO     | src.models.explainer:_log_top_features:96 -    6. feat_3                         0.00000 
+2026-04-28 14:18:01.899 | INFO     | src.models.explainer:_log_top_features:96 -    7. feat_5                         0.00000 
+2026-04-28 14:18:01.899 | INFO     | src.models.explainer:_log_top_features:96 -    8. feat_7                         0.00000 
+2026-04-28 14:18:01.899 | INFO     | src.models.explainer:_log_top_features:96 -    9. feat_8                         0.00000 
+2026-04-28 14:18:01.899 | INFO     | src.models.explainer:_log_top_features:96 -   10. feat_9                         0.00000 
+2026-04-28 14:18:27.279 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:27.383 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:27.388 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:27.453 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:27.457 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:27.528 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:27.536 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:27.615 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:27.618 | INFO     | src.models.trainer:save:104 - Model saved → C:\Users\ThinkBook\AppData\Local\Temp\pytest-of-ThinkBook\pytest-2\test_save_and_load0\test_model.pkl
+2026-04-28 14:18:27.637 | INFO     | src.models.trainer:load:124 - Model loaded ← C:\Users\ThinkBook\AppData\Local\Temp\pytest-of-ThinkBook\pytest-2\test_save_and_load0\test_model.pkl
+2026-04-28 14:18:27.644 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 5 trials
+2026-04-28 14:18:27.985 | INFO     | src.models.tuner:optimize:99 - Best trial #0: valid_acc=0.92, train_acc=0.9533, gap=0.0333
+2026-04-28 14:18:27.985 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 287, 'max_depth': 8, 'learning_rate': 0.1205712628744377, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'min_child_weight': 2, 'gamma': 0.05808361216819946, 'reg_alpha': 2.1423021757741068, 'reg_lambda': 0.10129197956845731}
+2026-04-28 14:18:27.987 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 5 trials
+2026-04-28 14:18:28.344 | INFO     | src.models.tuner:optimize:99 - Best trial #0: valid_acc=0.92, train_acc=0.9533, gap=0.0333
+2026-04-28 14:18:28.344 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 287, 'max_depth': 8, 'learning_rate': 0.1205712628744377, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'min_child_weight': 2, 'gamma': 0.05808361216819946, 'reg_alpha': 2.1423021757741068, 'reg_lambda': 0.10129197956845731}
+2026-04-28 14:18:28.346 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:28.416 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:28.424 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:28.425 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:28.494 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:28.500 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:28.502 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:28.575 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:28.581 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.9480 | prec=0.9344 | rec=0.9580 | f1=0.9461 | auc=0.993
+2026-04-28 14:18:28.587 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:28.592 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:28.593 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:18:28.593 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:18:28.593 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.8720 → ✓ PASS
+2026-04-28 14:18:28.593 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0760 → ✗ FAIL
+2026-04-28 14:18:28.593 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:18:28.593 | WARNING  | src.models.evaluator:_check_phase3_criteria:112 - 과적합 gap이 5%를 초과했습니다. 정규화 강화 또는 early stopping을 조정하세요.
+2026-04-28 14:18:28.597 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.1 (neg=131, pos=119)
+2026-04-28 14:18:28.665 | INFO     | src.models.trainer:train:75 - Train acc: 0.9480 | Valid acc: 0.8720 | Gap: 0.0760
+2026-04-28 14:18:28.671 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.8720 | prec=0.8806 | rec=0.8806 | f1=0.8806 | auc=0.9532
+2026-04-28 14:18:28.672 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → C:\Users\ThinkBook\AppData\Local\Temp\pytest-of-ThinkBook\pytest-2\test_save_report0\test_eval.json
+2026-04-28 14:18:28.675 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.04 (neg=51, pos=49)
+2026-04-28 14:18:28.754 | INFO     | src.models.trainer:train:75 - Train acc: 0.8900 | Valid acc: 0.8500 | Gap: 0.0400
+2026-04-28 14:18:28.755 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 100 → 50행
+2026-04-28 14:18:28.755 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:18:28.775 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:18:28.780 | INFO     | src.models.explainer:fit_transform:83 - 하위 20% 제거 후보 (1개): ['feat_4']
+2026-04-28 14:18:28.781 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:18:28.781 | INFO     | src.models.explainer:_log_top_features:96 -    1. feat_0                         1.93410 ████████████████████
+2026-04-28 14:18:28.781 | INFO     | src.models.explainer:_log_top_features:96 -    2. feat_1                         0.86070 ████████
+2026-04-28 14:18:28.781 | INFO     | src.models.explainer:_log_top_features:96 -    3. feat_3                         0.15960 █
+2026-04-28 14:18:28.781 | INFO     | src.models.explainer:_log_top_features:96 -    4. feat_2                         0.15543 █
+2026-04-28 14:18:28.781 | INFO     | src.models.explainer:_log_top_features:96 -    5. feat_4                         0.02639 
+2026-04-28 14:18:28.784 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.17 (neg=54, pos=46)
+2026-04-28 14:18:28.823 | INFO     | src.models.trainer:train:75 - Train acc: 0.9200 | Valid acc: 0.8000 | Gap: 0.1200
+2026-04-28 14:18:28.824 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 100 → 50행
+2026-04-28 14:18:28.824 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:18:28.831 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:18:28.833 | INFO     | src.models.explainer:fit_transform:83 - 하위 10% 제거 후보 (6개): ['feat_4', 'feat_3', 'feat_5', 'feat_7', 'feat_8', 'feat_9']
+2026-04-28 14:18:28.833 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:18:28.835 | INFO     | src.models.explainer:_log_top_features:96 -    1. feat_0                         1.84936 ████████████████████
+2026-04-28 14:18:28.835 | INFO     | src.models.explainer:_log_top_features:96 -    2. feat_1                         0.25419 ██
+2026-04-28 14:18:28.835 | INFO     | src.models.explainer:_log_top_features:96 -    3. feat_2                         0.14009 █
+2026-04-28 14:18:28.835 | INFO     | src.models.explainer:_log_top_features:96 -    4. feat_6                         0.05596 
+2026-04-28 14:18:28.835 | INFO     | src.models.explainer:_log_top_features:96 -    5. feat_4                         0.00000 
+2026-04-28 14:18:28.835 | INFO     | src.models.explainer:_log_top_features:96 -    6. feat_3                         0.00000 
+2026-04-28 14:18:28.836 | INFO     | src.models.explainer:_log_top_features:96 -    7. feat_5                         0.00000 
+2026-04-28 14:18:28.836 | INFO     | src.models.explainer:_log_top_features:96 -    8. feat_7                         0.00000 
+2026-04-28 14:18:28.836 | INFO     | src.models.explainer:_log_top_features:96 -    9. feat_8                         0.00000 
+2026-04-28 14:18:28.836 | INFO     | src.models.explainer:_log_top_features:96 -   10. feat_9                         0.00000 
+2026-04-28 14:19:08.352 | INFO     | __main__:main:47 - ============================================================
+2026-04-28 14:19:08.353 | INFO     | __main__:main:48 - Phase 3: XGBoost 모델 학습 시작
+2026-04-28 14:19:08.353 | INFO     | __main__:main:49 - ============================================================
+2026-04-28 14:19:08.353 | INFO     | __main__:main:52 - [1/5] 데이터셋 로드 중...
+2026-04-28 14:19:09.474 | INFO     | __main__:main:62 -   train: (1278771, 38) | valid: (248928, 38) | test: (413351, 38)
+2026-04-28 14:19:09.475 | INFO     | __main__:main:65 -   피처 수: 38
+2026-04-28 14:19:09.475 | INFO     | __main__:main:70 - [2/5] Optuna 하이퍼파라미터 튜닝 (100 trials)...
+2026-04-28 14:19:09.475 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 100 trials
+2026-04-28 14:22:38.767 | INFO     | src.models.tuner:optimize:99 - Best trial #70: valid_acc=0.533, train_acc=0.6215, gap=0.0886
+2026-04-28 14:22:38.767 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 448, 'max_depth': 3, 'learning_rate': 0.03768638956287555, 'subsample': 0.761029591654614, 'colsample_bytree': 0.5164527853113653, 'min_child_weight': 4, 'gamma': 0.2814741804849516, 'reg_alpha': 0.7347949073462787, 'reg_lambda': 0.45993041410657787}
+2026-04-28 14:22:38.779 | INFO     | src.models.tuner:save_study:136 - Study saved → data\models\optuna_study.json
+2026-04-28 14:22:38.786 | INFO     | __main__:main:76 - Top 5 trials:
+2026-04-28 14:22:38.786 | INFO     | __main__:main:78 -   # 70: valid_acc=0.533, gap=0.0886
+2026-04-28 14:22:38.786 | INFO     | __main__:main:78 -   # 71: valid_acc=0.533, gap=0.0886
+2026-04-28 14:22:38.787 | INFO     | __main__:main:78 -   # 72: valid_acc=0.533, gap=0.0886
+2026-04-28 14:22:38.787 | INFO     | __main__:main:78 -   # 73: valid_acc=0.533, gap=0.0886
+2026-04-28 14:22:38.787 | INFO     | __main__:main:78 -   # 74: valid_acc=0.533, gap=0.0886
+2026-04-28 14:22:38.787 | INFO     | __main__:main:83 - [3/5] XGBoost 모델 학습 중...
+2026-04-28 14:22:38.790 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 2.5 (neg=913787, pos=364984)
+2026-04-28 14:22:41.200 | INFO     | src.models.trainer:train:75 - Train acc: 0.6215 | Valid acc: 0.5330 | Gap: 0.0886
+2026-04-28 14:22:41.203 | INFO     | src.models.trainer:save:104 - Model saved → data\models\xgb_model.pkl
+2026-04-28 14:22:41.203 | INFO     | __main__:main:89 - [4/5] 모델 성능 평가...
+2026-04-28 14:22:42.926 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.6215 | prec=0.3663 | rec=0.4468 | f1=0.4026 | auc=0.5987
+2026-04-28 14:22:43.271 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.5330 | prec=0.3561 | rec=0.5917 | f1=0.4446 | auc=0.5672
+2026-04-28 14:22:43.810 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.5722 | prec=0.3481 | rec=0.4725 | f1=0.4009 | auc=0.5638
+2026-04-28 14:22:43.811 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:22:43.811 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:22:43.811 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.5330 → ✗ FAIL
+2026-04-28 14:22:43.811 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0885 → ✗ FAIL
+2026-04-28 14:22:43.811 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:22:43.812 | WARNING  | src.models.evaluator:_check_phase3_criteria:110 - 검증 정확도가 목표(55%) 미달입니다. 피처/파라미터를 재검토하세요.
+2026-04-28 14:22:43.812 | WARNING  | src.models.evaluator:_check_phase3_criteria:112 - 과적합 gap이 5%를 초과했습니다. 정규화 강화 또는 early stopping을 조정하세요.
+2026-04-28 14:22:43.812 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → data\reports\evaluation.json
+2026-04-28 14:22:43.813 | INFO     | __main__:main:106 - [5/5] SHAP 피처 중요도 분석 중...
+2026-04-28 14:22:43.818 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 248,928 → 5,000행
+2026-04-28 14:22:43.818 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:22:43.821 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:22:43.832 | INFO     | src.models.explainer:fit_transform:83 - 하위 10% 제거 후보 (35개): ['ma_alignment_bull', 'golden_cross', 'dead_cross', 'cdl_hammer', 'trend_slope_20', 'ma_alignment_bear', 'cdl_doji', 'cdl_three_soldiers', 'cdl_three_crows', 'cdl_morning_star', 'cdl_engulfing', 'resistance_distance_pct', 'resistance_breakout', 'near_52w_low', 'near_52w_high', 'head_and_shoulders', 'double_top', 'support_distance_pct', 'cdl_evening_star', 'triangle_convergence', 'double_bottom', 'stoch_d', 'macd_hist', 'cci_20', 'bb_pct_b', 'bb_width', 'stoch_k', 'atr_14', 'return_5d', 'return_20d', 'price_vs_ma20', 'price_vs_ma60', 'volume_ratio_20', 'obv_trend', 'volume_surge']
+2026-04-28 14:22:43.832 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:22:43.832 | INFO     | src.models.explainer:_log_top_features:96 -    1. volatility_20                  0.00959 ████████████████████
+2026-04-28 14:22:43.833 | INFO     | src.models.explainer:_log_top_features:96 -    2. rsi_14                         0.00357 ███████
+2026-04-28 14:22:43.833 | INFO     | src.models.explainer:_log_top_features:96 -    3. return_60d                     0.00219 ████
+2026-04-28 14:22:43.833 | INFO     | src.models.explainer:_log_top_features:96 -    4. ma_alignment_bull              0.00000 
+2026-04-28 14:22:43.833 | INFO     | src.models.explainer:_log_top_features:96 -    5. golden_cross                   0.00000 
+2026-04-28 14:22:43.833 | INFO     | src.models.explainer:_log_top_features:96 -    6. dead_cross                     0.00000 
+2026-04-28 14:22:43.834 | INFO     | src.models.explainer:_log_top_features:96 -    7. cdl_hammer                     0.00000 
+2026-04-28 14:22:43.834 | INFO     | src.models.explainer:_log_top_features:96 -    8. trend_slope_20                 0.00000 
+2026-04-28 14:22:43.834 | INFO     | src.models.explainer:_log_top_features:96 -    9. ma_alignment_bear              0.00000 
+2026-04-28 14:22:43.834 | INFO     | src.models.explainer:_log_top_features:96 -   10. cdl_doji                       0.00000 
+2026-04-28 14:22:43.835 | INFO     | src.models.explainer:_log_top_features:96 -   11. cdl_three_soldiers             0.00000 
+2026-04-28 14:22:43.835 | INFO     | src.models.explainer:_log_top_features:96 -   12. cdl_three_crows                0.00000 
+2026-04-28 14:22:43.835 | INFO     | src.models.explainer:_log_top_features:96 -   13. cdl_morning_star               0.00000 
+2026-04-28 14:22:43.835 | INFO     | src.models.explainer:_log_top_features:96 -   14. cdl_engulfing                  0.00000 
+2026-04-28 14:22:43.835 | INFO     | src.models.explainer:_log_top_features:96 -   15. resistance_distance_pct        0.00000 
+2026-04-28 14:22:43.877 | INFO     | src.models.explainer:save_importance:116 - SHAP importance saved → data\reports\shap_importance.csv
+2026-04-28 14:22:43.879 | INFO     | src.models.explainer:save_shap_values:127 - SHAP values saved → data\models\shap_values.pkl
+2026-04-28 14:22:43.880 | WARNING  | src.models.explainer:try_save_plot:157 - SHAP plot 저장 실패 (무시): No module named 'matplotlib'
+2026-04-28 14:22:43.880 | INFO     | __main__:main:143 - ============================================================
+2026-04-28 14:22:43.880 | INFO     | __main__:main:144 - Phase 3 완료
+2026-04-28 14:22:43.880 | INFO     | __main__:main:145 -   모델: data/models/xgb_model.json
+2026-04-28 14:22:43.880 | INFO     | __main__:main:146 -   평가: data/reports/evaluation.json
+2026-04-28 14:22:43.880 | INFO     | __main__:main:147 - ============================================================
+2026-04-28 14:27:45.616 | INFO     | __main__:main:51 - features_all.parquet 로드 중... (data\features\features_all.parquet)
+2026-04-28 14:27:45.871 | INFO     | __main__:main:53 -   로드 완료: 1,943,565행
+2026-04-28 14:27:45.876 | INFO     | __main__:main:57 - 기존 positive rate: 29.30% (threshold=0.02)
+2026-04-28 14:27:45.876 | INFO     | __main__:main:59 - target 재계산 중... (threshold=1.5%, horizon=5일)
+2026-04-28 14:27:46.852 | INFO     | __main__:main:64 - 신규 positive rate: 35.01% (threshold=1.5%)
+2026-04-28 14:27:46.853 | INFO     | __main__:main:67 - features_all.parquet 덮어쓰기 중...
+2026-04-28 14:27:48.491 | INFO     | __main__:main:71 - train/valid/test 재분리 + 스케일링 중...
+2026-04-28 14:27:49.398 | INFO     | src.features.dataset:build_dataset:59 - Split sizes — train: 1,278,771, valid: 248,928, test: 413,351
+2026-04-28 14:27:53.340 | INFO     | src.features.dataset:save_dataset:115 - Dataset saved to data\features/
+2026-04-28 14:27:53.345 | INFO     | __main__:main:75 - ==================================================
+2026-04-28 14:27:53.345 | INFO     | __main__:main:76 - 데이터셋 재구성 완료
+2026-04-28 14:27:53.345 | INFO     | __main__:main:77 -   threshold : 1.5%
+2026-04-28 14:27:53.345 | INFO     | __main__:main:78 -   positive  : 29.30% → 35.01%
+2026-04-28 14:27:53.347 | INFO     | __main__:main:79 -   train     : 1,278,771행
+2026-04-28 14:27:53.347 | INFO     | __main__:main:80 -   valid     : 248,928행
+2026-04-28 14:27:53.347 | INFO     | __main__:main:81 -   test      : 413,351행
+2026-04-28 14:27:53.347 | INFO     | __main__:main:82 - ==================================================
+2026-04-28 14:27:53.347 | INFO     | __main__:main:83 - 이제 python scripts/train_model.py 를 실행하세요.
+2026-04-28 14:28:41.499 | INFO     | __main__:main:47 - ============================================================
+2026-04-28 14:28:41.500 | INFO     | __main__:main:48 - Phase 3: XGBoost 모델 학습 시작
+2026-04-28 14:28:41.500 | INFO     | __main__:main:49 - ============================================================
+2026-04-28 14:28:41.500 | INFO     | __main__:main:52 - [1/5] 데이터셋 로드 중...
+2026-04-28 14:28:41.946 | INFO     | __main__:main:62 -   train: (1278771, 38) | valid: (248928, 38) | test: (413351, 38)
+2026-04-28 14:28:41.947 | INFO     | __main__:main:65 -   피처 수: 38
+2026-04-28 14:28:41.948 | INFO     | __main__:main:70 - [2/5] Optuna 하이퍼파라미터 튜닝 (100 trials)...
+2026-04-28 14:28:41.948 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 100 trials
+2026-04-28 14:32:14.895 | INFO     | src.models.tuner:optimize:99 - Best trial #42: valid_acc=0.4979, train_acc=0.5734, gap=0.0755
+2026-04-28 14:32:14.895 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 164, 'max_depth': 5, 'learning_rate': 0.21977891103724534, 'subsample': 0.6808515392010255, 'colsample_bytree': 0.7624495686848151, 'min_child_weight': 2, 'gamma': 0.4319021304902405, 'reg_alpha': 0.2080245112869547, 'reg_lambda': 0.001159662893697174}
+2026-04-28 14:32:14.906 | INFO     | src.models.tuner:save_study:136 - Study saved → data\models\optuna_study.json
+2026-04-28 14:32:14.914 | INFO     | __main__:main:76 - Top 5 trials:
+2026-04-28 14:32:14.914 | INFO     | __main__:main:78 -   # 42: valid_acc=0.4979, gap=0.0755
+2026-04-28 14:32:14.914 | INFO     | __main__:main:78 -   # 88: valid_acc=0.4963, gap=0.0741
+2026-04-28 14:32:14.914 | INFO     | __main__:main:78 -   # 89: valid_acc=0.4963, gap=0.0741
+2026-04-28 14:32:14.915 | INFO     | __main__:main:78 -   # 94: valid_acc=0.4963, gap=0.0741
+2026-04-28 14:32:14.915 | INFO     | __main__:main:78 -   # 95: valid_acc=0.4963, gap=0.0741
+2026-04-28 14:32:14.915 | INFO     | __main__:main:83 - [3/5] XGBoost 모델 학습 중...
+2026-04-28 14:32:14.918 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 1.9 (neg=837358, pos=441413)
+2026-04-28 14:32:17.444 | INFO     | src.models.trainer:train:75 - Train acc: 0.5734 | Valid acc: 0.4979 | Gap: 0.0755
+2026-04-28 14:32:17.446 | INFO     | src.models.trainer:save:104 - Model saved → data\models\xgb_model.pkl
+2026-04-28 14:32:17.446 | INFO     | __main__:main:89 - [4/5] 모델 성능 평가...
+2026-04-28 14:32:19.136 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.5734 | prec=0.4082 | rec=0.5244 | f1=0.4590 | auc=0.5848
+2026-04-28 14:32:19.470 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.4979 | prec=0.3932 | rec=0.6878 | f1=0.5003 | auc=0.5577
+2026-04-28 14:32:20.039 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.5226 | prec=0.3892 | rec=0.5979 | f1=0.4715 | auc=0.5527
+2026-04-28 14:32:20.040 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:32:20.040 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:32:20.040 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.4979 → ✗ FAIL
+2026-04-28 14:32:20.040 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0755 → ✗ FAIL
+2026-04-28 14:32:20.041 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:32:20.041 | WARNING  | src.models.evaluator:_check_phase3_criteria:110 - 검증 정확도가 목표(55%) 미달입니다. 피처/파라미터를 재검토하세요.
+2026-04-28 14:32:20.041 | WARNING  | src.models.evaluator:_check_phase3_criteria:112 - 과적합 gap이 5%를 초과했습니다. 정규화 강화 또는 early stopping을 조정하세요.
+2026-04-28 14:32:20.041 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → data\reports\evaluation.json
+2026-04-28 14:32:20.042 | INFO     | __main__:main:106 - [5/5] SHAP 피처 중요도 분석 중...
+2026-04-28 14:32:20.046 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 248,928 → 5,000행
+2026-04-28 14:32:20.046 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:32:20.050 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:32:20.060 | INFO     | src.models.explainer:fit_transform:83 - 하위 10% 제거 후보 (28개): ['golden_cross', 'ma_alignment_bear', 'ma_alignment_bull', 'dead_cross', 'cdl_hammer', 'resistance_distance_pct', 'cdl_doji', 'cdl_engulfing', 'cdl_three_soldiers', 'cdl_three_crows', 'cdl_morning_star', 'cdl_evening_star', 'triangle_convergence', 'double_bottom', 'double_top', 'head_and_shoulders', 'resistance_breakout', 'near_52w_low', 'support_distance_pct', 'cci_20', 'bb_width', 'macd_hist', 'stoch_k', 'return_20d', 'price_vs_ma20', 'volume_ratio_20', 'obv_trend', 'volume_surge']
+2026-04-28 14:32:20.061 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:32:20.061 | INFO     | src.models.explainer:_log_top_features:96 -    1. volatility_20                  0.03922 ████████████████████
+2026-04-28 14:32:20.061 | INFO     | src.models.explainer:_log_top_features:96 -    2. near_52w_high                  0.01445 ███████
+2026-04-28 14:32:20.062 | INFO     | src.models.explainer:_log_top_features:96 -    3. rsi_14                         0.01029 █████
+2026-04-28 14:32:20.062 | INFO     | src.models.explainer:_log_top_features:96 -    4. return_60d                     0.00584 ██
+2026-04-28 14:32:20.062 | INFO     | src.models.explainer:_log_top_features:96 -    5. return_5d                      0.00470 ██
+2026-04-28 14:32:20.063 | INFO     | src.models.explainer:_log_top_features:96 -    6. bb_pct_b                       0.00238 █
+2026-04-28 14:32:20.063 | INFO     | src.models.explainer:_log_top_features:96 -    7. stoch_d                        0.00130 
+2026-04-28 14:32:20.063 | INFO     | src.models.explainer:_log_top_features:96 -    8. atr_14                         0.00108 
+2026-04-28 14:32:20.063 | INFO     | src.models.explainer:_log_top_features:96 -    9. price_vs_ma60                  0.00049 
+2026-04-28 14:32:20.063 | INFO     | src.models.explainer:_log_top_features:96 -   10. trend_slope_20                 0.00018 
+2026-04-28 14:32:20.064 | INFO     | src.models.explainer:_log_top_features:96 -   11. golden_cross                   0.00000 
+2026-04-28 14:32:20.064 | INFO     | src.models.explainer:_log_top_features:96 -   12. ma_alignment_bear              0.00000 
+2026-04-28 14:32:20.064 | INFO     | src.models.explainer:_log_top_features:96 -   13. ma_alignment_bull              0.00000 
+2026-04-28 14:32:20.064 | INFO     | src.models.explainer:_log_top_features:96 -   14. dead_cross                     0.00000 
+2026-04-28 14:32:20.064 | INFO     | src.models.explainer:_log_top_features:96 -   15. cdl_hammer                     0.00000 
+2026-04-28 14:32:20.071 | INFO     | src.models.explainer:save_importance:116 - SHAP importance saved → data\reports\shap_importance.csv
+2026-04-28 14:32:20.073 | INFO     | src.models.explainer:save_shap_values:127 - SHAP values saved → data\models\shap_values.pkl
+2026-04-28 14:32:20.073 | WARNING  | src.models.explainer:try_save_plot:157 - SHAP plot 저장 실패 (무시): No module named 'matplotlib'
+2026-04-28 14:32:20.073 | INFO     | __main__:main:143 - ============================================================
+2026-04-28 14:32:20.073 | INFO     | __main__:main:144 - Phase 3 완료
+2026-04-28 14:32:20.073 | INFO     | __main__:main:145 -   모델: data/models/xgb_model.json
+2026-04-28 14:32:20.073 | INFO     | __main__:main:146 -   평가: data/reports/evaluation.json
+2026-04-28 14:32:20.073 | INFO     | __main__:main:147 - ============================================================
+2026-04-28 14:38:48.090 | INFO     | __main__:main:57 - [1/4] features_all.parquet 로드 중...
+2026-04-28 14:38:48.363 | INFO     | __main__:main:59 -   로드 완료: 1,943,565행, 503개 종목
+2026-04-28 14:38:48.367 | INFO     | __main__:main:62 -   현재 positive rate: 35.01%
+2026-04-28 14:38:48.367 | INFO     | __main__:main:65 - [2/4] target 재계산 중... (threshold=2.0%)
+2026-04-28 14:38:49.365 | INFO     | __main__:main:69 -   positive rate: 35.01% -> 29.30%
+2026-04-28 14:38:49.367 | INFO     | __main__:main:74 - [3/4] 횡단면 정규화 적용 중... (19개 연속형 피처)
+2026-04-28 14:38:49.367 | INFO     | __main__:main:75 -   방법: 날짜별 백분위 순위 (0=최하위, 1=최상위)
+2026-04-28 14:39:01.315 | INFO     | __main__:main:77 -   완료 (소요: 13.2초)
+2026-04-28 14:39:01.316 | INFO     | __main__:main:82 - [4/4] parquet 저장 + train/valid/test 분리 중...
+2026-04-28 14:39:03.920 | INFO     | src.features.dataset:build_dataset:59 - Split sizes — train: 1,278,771, valid: 248,928, test: 413,351
+2026-04-28 14:39:07.261 | INFO     | src.features.dataset:save_dataset:115 - Dataset saved to data\features/
+2026-04-28 14:39:07.266 | INFO     | __main__:main:89 - =======================================================
+2026-04-28 14:39:07.266 | INFO     | __main__:main:90 - 데이터셋 재구성 완료
+2026-04-28 14:39:07.266 | INFO     | __main__:main:91 -   threshold  : 2.0%
+2026-04-28 14:39:07.266 | INFO     | __main__:main:92 -   normalize  : YES
+2026-04-28 14:39:07.266 | INFO     | __main__:main:93 -   positive   : 35.01% -> 29.30%
+2026-04-28 14:39:07.266 | INFO     | __main__:main:94 -   train      : 1,278,771행
+2026-04-28 14:39:07.266 | INFO     | __main__:main:95 -   valid      : 248,928행
+2026-04-28 14:39:07.266 | INFO     | __main__:main:96 -   test       : 413,351행
+2026-04-28 14:39:07.266 | INFO     | __main__:main:97 -   소요 시간  : 19.2초
+2026-04-28 14:39:07.266 | INFO     | __main__:main:98 - =======================================================
+2026-04-28 14:39:07.266 | INFO     | __main__:main:99 - 다음: python scripts/train_model.py
+2026-04-28 14:39:48.368 | INFO     | __main__:main:47 - ============================================================
+2026-04-28 14:39:48.368 | INFO     | __main__:main:48 - Phase 3: XGBoost 모델 학습 시작
+2026-04-28 14:39:48.368 | INFO     | __main__:main:49 - ============================================================
+2026-04-28 14:39:48.368 | INFO     | __main__:main:52 - [1/5] 데이터셋 로드 중...
+2026-04-28 14:39:48.742 | INFO     | __main__:main:62 -   train: (1278771, 38) | valid: (248928, 38) | test: (413351, 38)
+2026-04-28 14:39:48.743 | INFO     | __main__:main:65 -   피처 수: 38
+2026-04-28 14:39:48.743 | INFO     | __main__:main:70 - [2/5] Optuna 하이퍼파라미터 튜닝 (100 trials)...
+2026-04-28 14:39:48.743 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 100 trials
+2026-04-28 14:43:51.811 | INFO     | __main__:main:47 - ============================================================
+2026-04-28 14:43:51.812 | INFO     | __main__:main:48 - Phase 3: XGBoost 모델 학습 시작
+2026-04-28 14:43:51.822 | INFO     | __main__:main:49 - ============================================================
+2026-04-28 14:43:51.822 | INFO     | __main__:main:52 - [1/5] 데이터셋 로드 중...
+2026-04-28 14:43:52.416 | INFO     | __main__:main:62 -   train: (1278771, 38) | valid: (248928, 38) | test: (413351, 38)
+2026-04-28 14:43:52.416 | INFO     | __main__:main:65 -   피처 수: 38
+2026-04-28 14:43:52.416 | INFO     | __main__:main:70 - [2/5] Optuna 하이퍼파라미터 튜닝 (100 trials)...
+2026-04-28 14:43:52.416 | INFO     | src.models.tuner:optimize:44 - Optuna 시작: 100 trials
+2026-04-28 14:44:17.954 | INFO     | src.models.tuner:optimize:99 - Best trial #75: valid_acc=0.5325, train_acc=0.5604, gap=0.0278
+2026-04-28 14:44:17.954 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 207, 'max_depth': 8, 'learning_rate': 0.29639633602251436, 'subsample': 0.627276579384425, 'colsample_bytree': 0.5182264310430803, 'min_child_weight': 5, 'gamma': 0.27557240437523944, 'reg_alpha': 0.010548956574715268, 'reg_lambda': 0.5725842689477826}
+2026-04-28 14:44:17.965 | INFO     | src.models.tuner:save_study:136 - Study saved → data\models\optuna_study.json
+2026-04-28 14:44:17.977 | INFO     | __main__:main:76 - Top 5 trials:
+2026-04-28 14:44:17.978 | INFO     | __main__:main:78 -   # 75: valid_acc=0.5325, gap=0.0278
+2026-04-28 14:44:17.978 | INFO     | __main__:main:78 -   # 84: valid_acc=0.5314, gap=0.0298
+2026-04-28 14:44:17.978 | INFO     | __main__:main:78 -   # 90: valid_acc=0.5309, gap=0.0315
+2026-04-28 14:44:17.978 | INFO     | __main__:main:78 -   # 32: valid_acc=0.5297, gap=0.0229
+2026-04-28 14:44:17.978 | INFO     | __main__:main:78 -   # 13: valid_acc=0.5292, gap=0.0244
+2026-04-28 14:44:17.978 | INFO     | __main__:main:83 - [3/5] XGBoost 모델 학습 중...
+2026-04-28 14:44:18.015 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 2.5 (neg=913787, pos=364984)
+2026-04-28 14:44:23.118 | INFO     | src.models.trainer:train:75 - Train acc: 0.5604 | Valid acc: 0.5325 | Gap: 0.0278
+2026-04-28 14:44:23.123 | INFO     | src.models.trainer:save:104 - Model saved → data\models\xgb_model.pkl
+2026-04-28 14:44:23.123 | INFO     | __main__:main:89 - [4/5] 모델 성능 평가...
+2026-04-28 14:44:26.136 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.5604 | prec=0.3393 | rec=0.5705 | f1=0.4256 | auc=0.5921
+2026-04-28 14:44:26.669 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.5325 | prec=0.3503 | rec=0.5611 | f1=0.4313 | auc=0.5567
+2026-04-28 14:44:27.645 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.5425 | prec=0.3423 | rec=0.5540 | f1=0.4232 | auc=0.5638
+2026-04-28 14:44:27.645 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:44:27.645 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:44:27.645 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.5325 → ✗ FAIL
+2026-04-28 14:44:27.646 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0279 → ✓ PASS
+2026-04-28 14:44:27.647 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:44:27.647 | WARNING  | src.models.evaluator:_check_phase3_criteria:110 - 검증 정확도가 목표(55%) 미달입니다. 피처/파라미터를 재검토하세요.
+2026-04-28 14:44:27.647 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → data\reports\evaluation.json
+2026-04-28 14:44:27.647 | INFO     | __main__:main:106 - [5/5] SHAP 피처 중요도 분석 중...
+2026-04-28 14:44:27.654 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 248,928 → 5,000행
+2026-04-28 14:44:27.655 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:44:27.678 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:44:27.776 | INFO     | src.models.explainer:fit_transform:83 - 하위 10% 제거 후보 (15개): ['cdl_hammer', 'dead_cross', 'ma_alignment_bull', 'double_top', 'cdl_morning_star', 'cdl_three_crows', 'resistance_distance_pct', 'cdl_doji', 'resistance_breakout', 'near_52w_high', 'cdl_engulfing', 'cdl_evening_star', 'cci_20', 'macd_hist', 'price_vs_ma60']
+2026-04-28 14:44:27.776 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:44:27.776 | INFO     | src.models.explainer:_log_top_features:96 -    1. volatility_20                  0.08633 ████████████████████
+2026-04-28 14:44:27.777 | INFO     | src.models.explainer:_log_top_features:96 -    2. ma_alignment_bear              0.03084 ███████
+2026-04-28 14:44:27.777 | INFO     | src.models.explainer:_log_top_features:96 -    3. support_distance_pct           0.01257 ██
+2026-04-28 14:44:27.778 | INFO     | src.models.explainer:_log_top_features:96 -    4. cdl_three_soldiers             0.01174 ██
+2026-04-28 14:44:27.778 | INFO     | src.models.explainer:_log_top_features:96 -    5. return_60d                     0.01097 ██
+2026-04-28 14:44:27.778 | INFO     | src.models.explainer:_log_top_features:96 -    6. rsi_14                         0.01045 ██
+2026-04-28 14:44:27.779 | INFO     | src.models.explainer:_log_top_features:96 -    7. return_20d                     0.00902 ██
+2026-04-28 14:44:27.779 | INFO     | src.models.explainer:_log_top_features:96 -    8. bb_pct_b                       0.00886 ██
+2026-04-28 14:44:27.779 | INFO     | src.models.explainer:_log_top_features:96 -    9. price_vs_ma20                  0.00824 █
+2026-04-28 14:44:27.780 | INFO     | src.models.explainer:_log_top_features:96 -   10. bb_width                       0.00671 █
+2026-04-28 14:44:27.780 | INFO     | src.models.explainer:_log_top_features:96 -   11. atr_14                         0.00560 █
+2026-04-28 14:44:27.781 | INFO     | src.models.explainer:_log_top_features:96 -   12. return_5d                      0.00494 █
+2026-04-28 14:44:27.781 | INFO     | src.models.explainer:_log_top_features:96 -   13. double_bottom                  0.00491 █
+2026-04-28 14:44:27.781 | INFO     | src.models.explainer:_log_top_features:96 -   14. stoch_d                        0.00430 
+2026-04-28 14:44:27.781 | INFO     | src.models.explainer:_log_top_features:96 -   15. volume_ratio_20                0.00310 
+2026-04-28 14:44:27.788 | INFO     | src.models.explainer:save_importance:116 - SHAP importance saved → data\reports\shap_importance.csv
+2026-04-28 14:44:27.790 | INFO     | src.models.explainer:save_shap_values:127 - SHAP values saved → data\models\shap_values.pkl
+2026-04-28 14:44:27.790 | WARNING  | src.models.explainer:try_save_plot:157 - SHAP plot 저장 실패 (무시): No module named 'matplotlib'
+2026-04-28 14:44:27.791 | INFO     | __main__:main:143 - ============================================================
+2026-04-28 14:44:27.791 | INFO     | __main__:main:144 - Phase 3 완료
+2026-04-28 14:44:27.791 | INFO     | __main__:main:145 -   모델: data/models/xgb_model.json
+2026-04-28 14:44:27.791 | INFO     | __main__:main:146 -   평가: data/reports/evaluation.json
+2026-04-28 14:44:27.791 | INFO     | __main__:main:147 - ============================================================
+2026-04-28 14:48:30.947 | INFO     | src.models.tuner:optimize:99 - Best trial #75: valid_acc=0.5325, train_acc=0.5604, gap=0.0278
+2026-04-28 14:48:30.947 | INFO     | src.models.tuner:optimize:105 - Best params: {'n_estimators': 207, 'max_depth': 8, 'learning_rate': 0.29639633602251436, 'subsample': 0.627276579384425, 'colsample_bytree': 0.5182264310430803, 'min_child_weight': 5, 'gamma': 0.27557240437523944, 'reg_alpha': 0.010548956574715268, 'reg_lambda': 0.5725842689477826}
+2026-04-28 14:48:30.961 | INFO     | src.models.tuner:save_study:136 - Study saved → data\models\optuna_study.json
+2026-04-28 14:48:30.970 | INFO     | __main__:main:76 - Top 5 trials:
+2026-04-28 14:48:30.970 | INFO     | __main__:main:78 -   # 75: valid_acc=0.5325, gap=0.0278
+2026-04-28 14:48:30.970 | INFO     | __main__:main:78 -   # 84: valid_acc=0.5314, gap=0.0298
+2026-04-28 14:48:30.970 | INFO     | __main__:main:78 -   # 90: valid_acc=0.5309, gap=0.0315
+2026-04-28 14:48:30.970 | INFO     | __main__:main:78 -   # 32: valid_acc=0.5297, gap=0.0229
+2026-04-28 14:48:30.970 | INFO     | __main__:main:78 -   # 13: valid_acc=0.5292, gap=0.0244
+2026-04-28 14:48:30.971 | INFO     | __main__:main:83 - [3/5] XGBoost 모델 학습 중...
+2026-04-28 14:48:30.974 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 2.5 (neg=913787, pos=364984)
+2026-04-28 14:48:34.168 | INFO     | src.models.trainer:train:75 - Train acc: 0.5604 | Valid acc: 0.5325 | Gap: 0.0278
+2026-04-28 14:48:34.172 | INFO     | src.models.trainer:save:104 - Model saved → data\models\xgb_model.pkl
+2026-04-28 14:48:34.172 | INFO     | __main__:main:89 - [4/5] 모델 성능 평가...
+2026-04-28 14:48:36.235 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.5604 | prec=0.3393 | rec=0.5705 | f1=0.4256 | auc=0.5921
+2026-04-28 14:48:36.573 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.5325 | prec=0.3503 | rec=0.5611 | f1=0.4313 | auc=0.5567
+2026-04-28 14:48:37.128 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.5425 | prec=0.3423 | rec=0.5540 | f1=0.4232 | auc=0.5638
+2026-04-28 14:48:37.129 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:48:37.129 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:48:37.130 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.5325 → ✗ FAIL
+2026-04-28 14:48:37.130 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0279 → ✓ PASS
+2026-04-28 14:48:37.130 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:48:37.130 | WARNING  | src.models.evaluator:_check_phase3_criteria:110 - 검증 정확도가 목표(55%) 미달입니다. 피처/파라미터를 재검토하세요.
+2026-04-28 14:48:37.132 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → data\reports\evaluation.json
+2026-04-28 14:48:37.133 | INFO     | __main__:main:106 - [5/5] SHAP 피처 중요도 분석 중...
+2026-04-28 14:48:37.141 | INFO     | src.models.explainer:fit_transform:55 - SHAP 샘플링: 248,928 → 5,000행
+2026-04-28 14:48:37.141 | INFO     | src.models.explainer:fit_transform:59 - SHAP TreeExplainer 초기화 중...
+2026-04-28 14:48:37.152 | INFO     | src.models.explainer:fit_transform:62 - SHAP 값 계산 중... (수 분 소요될 수 있음)
+2026-04-28 14:48:37.203 | INFO     | src.models.explainer:fit_transform:83 - 하위 10% 제거 후보 (15개): ['cdl_hammer', 'dead_cross', 'ma_alignment_bull', 'double_top', 'cdl_morning_star', 'cdl_three_crows', 'resistance_distance_pct', 'cdl_doji', 'resistance_breakout', 'near_52w_high', 'cdl_engulfing', 'cdl_evening_star', 'cci_20', 'macd_hist', 'price_vs_ma60']
+2026-04-28 14:48:37.203 | INFO     | src.models.explainer:_log_top_features:93 - === Top 15 피처 (SHAP 중요도) ===
+2026-04-28 14:48:37.204 | INFO     | src.models.explainer:_log_top_features:96 -    1. volatility_20                  0.08633 ████████████████████
+2026-04-28 14:48:37.204 | INFO     | src.models.explainer:_log_top_features:96 -    2. ma_alignment_bear              0.03084 ███████
+2026-04-28 14:48:37.204 | INFO     | src.models.explainer:_log_top_features:96 -    3. support_distance_pct           0.01257 ██
+2026-04-28 14:48:37.205 | INFO     | src.models.explainer:_log_top_features:96 -    4. cdl_three_soldiers             0.01174 ██
+2026-04-28 14:48:37.205 | INFO     | src.models.explainer:_log_top_features:96 -    5. return_60d                     0.01097 ██
+2026-04-28 14:48:37.205 | INFO     | src.models.explainer:_log_top_features:96 -    6. rsi_14                         0.01045 ██
+2026-04-28 14:48:37.205 | INFO     | src.models.explainer:_log_top_features:96 -    7. return_20d                     0.00902 ██
+2026-04-28 14:48:37.206 | INFO     | src.models.explainer:_log_top_features:96 -    8. bb_pct_b                       0.00886 ██
+2026-04-28 14:48:37.206 | INFO     | src.models.explainer:_log_top_features:96 -    9. price_vs_ma20                  0.00824 █
+2026-04-28 14:48:37.206 | INFO     | src.models.explainer:_log_top_features:96 -   10. bb_width                       0.00671 █
+2026-04-28 14:48:37.206 | INFO     | src.models.explainer:_log_top_features:96 -   11. atr_14                         0.00560 █
+2026-04-28 14:48:37.206 | INFO     | src.models.explainer:_log_top_features:96 -   12. return_5d                      0.00494 █
+2026-04-28 14:48:37.207 | INFO     | src.models.explainer:_log_top_features:96 -   13. double_bottom                  0.00491 █
+2026-04-28 14:48:37.207 | INFO     | src.models.explainer:_log_top_features:96 -   14. stoch_d                        0.00430 
+2026-04-28 14:48:37.207 | INFO     | src.models.explainer:_log_top_features:96 -   15. volume_ratio_20                0.00310 
+2026-04-28 14:48:37.214 | INFO     | src.models.explainer:save_importance:116 - SHAP importance saved → data\reports\shap_importance.csv
+2026-04-28 14:48:37.216 | INFO     | src.models.explainer:save_shap_values:127 - SHAP values saved → data\models\shap_values.pkl
+2026-04-28 14:48:37.216 | WARNING  | src.models.explainer:try_save_plot:157 - SHAP plot 저장 실패 (무시): No module named 'matplotlib'
+2026-04-28 14:48:37.216 | INFO     | __main__:main:115 - 하위 피처 15개 제거 후 재학습 (38 → 23 피처)
+2026-04-28 14:48:37.262 | INFO     | src.models.trainer:train:60 - scale_pos_weight = 2.5 (neg=913787, pos=364984)
+2026-04-28 14:48:39.938 | INFO     | src.models.trainer:train:75 - Train acc: 0.5705 | Valid acc: 0.5352 | Gap: 0.0354
+2026-04-28 14:48:39.955 | INFO     | src.models.trainer:save:104 - Model saved → data\models\xgb_model_filtered.pkl
+2026-04-28 14:48:42.133 | INFO     | src.models.evaluator:_log_metrics:147 - [TRAIN] acc=0.5705 | prec=0.3455 | rec=0.5644 | f1=0.4286 | auc=0.6002
+2026-04-28 14:48:42.479 | INFO     | src.models.evaluator:_log_metrics:147 - [VALID] acc=0.5352 | prec=0.3509 | rec=0.5549 | f1=0.4300 | auc=0.5569
+2026-04-28 14:48:43.039 | INFO     | src.models.evaluator:_log_metrics:147 - [TEST ] acc=0.5461 | prec=0.3426 | rec=0.5425 | f1=0.4199 | auc=0.5627
+2026-04-28 14:48:43.039 | INFO     | src.models.evaluator:_check_phase3_criteria:99 - ==================================================
+2026-04-28 14:48:43.040 | INFO     | src.models.evaluator:_check_phase3_criteria:100 - [ Phase 3 성능 기준 체크 ]
+2026-04-28 14:48:43.040 | INFO     | src.models.evaluator:_check_phase3_criteria:101 -   검증 정확도 55% 이상:  0.5352 → ✗ FAIL
+2026-04-28 14:48:43.041 | INFO     | src.models.evaluator:_check_phase3_criteria:104 -   과적합 gap 5% 이내:   0.0353 → ✓ PASS
+2026-04-28 14:48:43.041 | INFO     | src.models.evaluator:_check_phase3_criteria:107 - ==================================================
+2026-04-28 14:48:43.042 | WARNING  | src.models.evaluator:_check_phase3_criteria:110 - 검증 정확도가 목표(55%) 미달입니다. 피처/파라미터를 재검토하세요.
+2026-04-28 14:48:43.054 | INFO     | src.models.evaluator:save_report:143 - Evaluation report saved → data\reports\evaluation_filtered.json
+2026-04-28 14:48:43.054 | INFO     | __main__:main:136 - 재학습 완료.
+2026-04-28 14:48:43.055 | INFO     | __main__:main:143 - ============================================================
+2026-04-28 14:48:43.055 | INFO     | __main__:main:144 - Phase 3 완료
+2026-04-28 14:48:43.055 | INFO     | __main__:main:145 -   모델: data/models/xgb_model.json
+2026-04-28 14:48:43.056 | INFO     | __main__:main:146 -   평가: data/reports/evaluation.json
+2026-04-28 14:48:43.056 | INFO     | __main__:main:147 - ============================================================

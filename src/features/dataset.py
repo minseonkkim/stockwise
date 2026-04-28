@@ -57,7 +57,7 @@ def build_dataset(df: pd.DataFrame) -> dict:
     test_df  = df[df["date"] >= VALID_END].copy()
 
     logger.info(
-        f"Split sizes — train: {len(train_df):,}, valid: {len(valid_df):,}, test: {len(test_df):,}"
+        f"Split sizes - train: {len(train_df):,}, valid: {len(valid_df):,}, test: {len(test_df):,}"
     )
 
     # Scaler: train 기준 fit

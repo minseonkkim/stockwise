@@ -130,7 +130,48 @@ python scripts/build_features.py --tickers AAPL MSFT GOOGL
 
 ---
 
-## 8. 테스트 실행
+## 8. 모델 학습 (Phase 3 — 30분~2시간 소요)
+
+```bash
+python scripts/train_model.py
+```
+
+Optuna 100 trials 하이퍼파라미터 튜닝 → XGBoost 학습 → SHAP 피처 중요도 분석까지 자동 수행.
+
+완료 후 생성 파일:
+
+```
+data/
+├── models/
+│   └── xgb_model.json              # 학습된 XGBoost 모델
+└── reports/
+    ├── evaluation.json             # train / valid / test 성능 리포트
+    ├── shap_importance.json        # SHAP 피처 중요도
+    ├── shap_values.npy             # SHAP 값 (배열)
+    └── shap_summary.png            # SHAP 요약 플롯
+```
+
+주요 옵션:
+
+```bash
+# 빠른 테스트 (trials 10회, SHAP 건너뜀)
+python scripts/train_model.py --trials 10 --no-shap
+
+# 튜닝 없이 기본 파라미터로 학습
+python scripts/train_model.py --no-tune
+
+# SHAP 하위 피처(하위 10%) 제거 후 재학습
+python scripts/train_model.py --retrain-after-shap
+```
+
+성능 목표:
+
+- 검증 정확도 **55% 이상** (랜덤 대비 유의미)
+- train − validation 정확도 차이 **5% 이내** (과적합 방지)
+
+---
+
+## 9. 테스트 실행
 
 ```bash
 pytest tests/ -v
@@ -163,12 +204,16 @@ stockwise/
 │   ├── database/       # SQLAlchemy 모델, DB 연결
 │   ├── data_collection/# yfinance 수집, S&P500 유니버스, 검증
 │   ├── features/       # 차트 기법 피처, 수치 피처, 파이프라인
+│   ├── models/         # XGBoost 트레이너, Optuna 튜너, 평가, SHAP
 │   └── utils/          # 로거
 ├── airflow/dags/       # Airflow DAG
 ├── docker/             # docker-compose.yml
 ├── scripts/            # 실행 스크립트
 ├── tests/              # 단위 테스트
-├── data/               # 생성 데이터 (git 제외)
+├── data/
+│   ├── features/       # Phase 2 피처 데이터
+│   ├── models/         # Phase 3 학습된 모델 (git 제외)
+│   └── reports/        # Phase 3 평가 리포트 (git 제외)
 └── requirements.txt
 ```
 
@@ -220,3 +265,22 @@ pip install pyarrow
 
 `.env` 파일의 `DB_HOST`, `DB_PORT`, `DB_PASSWORD` 확인.
 Docker 사용 중이라면 `docker ps`로 컨테이너 상태 확인.
+
+### xgboost / optuna / shap 설치 오류
+
+```bash
+pip install xgboost optuna shap
+```
+
+### SHAP 플롯 저장 오류 (matplotlib 없음)
+
+```bash
+pip install matplotlib
+```
+
+### Optuna 로그가 너무 많이 출력될 때
+
+```python
+import optuna
+optuna.logging.set_verbosity(optuna.logging.WARNING)
+```

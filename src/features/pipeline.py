@@ -24,27 +24,36 @@ FEATURES_DIR.mkdir(parents=True, exist_ok=True)
 ALL_FEATURE_COLS = CHART_FEATURE_COLS + QUANT_FEATURE_COLS
 
 
-def build_features_for_ticker(ticker: str, df: pd.DataFrame) -> pd.DataFrame:
+def build_features_for_ticker(
+    ticker: str,
+    df: pd.DataFrame,
+    threshold: float = 0.02,
+) -> pd.DataFrame:
     """단일 종목 OHLCV → 피처 DataFrame."""
     df = compute_chart_features(df)
     df = compute_quant_features(df)
-    df = add_target(df)
+    df = add_target(df, threshold=threshold)
     df["ticker"] = ticker
     return df
 
 
-def build_all_features(tickers: list[str] | None = None, batch_size: int = 50) -> pd.DataFrame:
+def build_all_features(
+    tickers: list[str] | None = None,
+    batch_size: int = 50,
+    threshold: float = 0.02,
+) -> pd.DataFrame:
     """
     전 종목 피처를 계산하고 합친 DataFrame을 반환한다.
 
     Args:
         tickers: None이면 DB의 전체 활성 종목
         batch_size: DB 조회 배치 크기
+        threshold: 타깃 레이블 수익률 기준 (기본 0.02 = +2%)
     """
     if tickers is None:
         tickers = _get_all_tickers()
 
-    logger.info(f"Building features for {len(tickers)} tickers")
+    logger.info(f"Building features for {len(tickers)} tickers (target threshold={threshold:.1%})")
     results = []
     failed  = []
 
@@ -55,7 +64,7 @@ def build_all_features(tickers: list[str] | None = None, batch_size: int = 50) -
                 logger.debug(f"{ticker}: insufficient data ({len(df) if df is not None else 0} rows)")
                 continue
 
-            feat_df = build_features_for_ticker(ticker, df)
+            feat_df = build_features_for_ticker(ticker, df, threshold=threshold)
             results.append(feat_df)
 
             if i % 50 == 0:
