@@ -373,19 +373,47 @@ qs.reports.full(strategy_returns, benchmark=sp500_returns)
 
 **목표**: 예측 결과를 실시간으로 확인하는 웹 서비스 구축
 
+#### 신호 분류 기준
+
+> **주의**: `prob >= 0.5` 절대 임계값을 쓰면 거의 모든 종목이 hold로 분류된다.
+> 타깃 레이블(`5일 후 +2%`)의 실제 positive 비율이 25~35%이므로, 모델 확률 분포가
+> 0.5 아래에 집중되는 것은 정상이다. 반드시 **상대적 순위(Top-N)** 방식을 사용할 것.
+
+```python
+# ❌ 잘못된 방식 — 대부분 hold로 나옴
+signal = "buy" if prob >= 0.5 else "hold"
+
+# ✅ 올바른 방식 — 백테스트와 동일한 Top-N 선택
+today_df = today_df.sort_values("prob", ascending=False)
+today_df["signal"] = "hold"
+today_df.iloc[:N_TOP, today_df.columns.get_loc("signal")] = "buy"
+# N_TOP = 20 (기본값, 백테스트 설정과 동일하게 유지)
+```
+
 #### FastAPI 엔드포인트
 
 ```
-GET  /api/predictions              # 오늘자 전 종목 예측 신호
+GET  /api/predictions              # 오늘자 전 종목 예측 신호 (prob + signal 포함)
 GET  /api/predictions/{ticker}     # 특정 종목 예측 히스토리
 GET  /api/backtest/summary         # 백테스트 성과 요약
 GET  /api/features/{ticker}        # 종목별 피처 현황
 ```
 
+응답 예시:
+```json
+{
+  "date": "2026-04-29",
+  "ticker": "AAPL",
+  "prob": 0.63,
+  "signal": "buy",
+  "rank": 5
+}
+```
+
 #### Next.js 페이지 구성
 
 ```
-/                  메인 대시보드 — 오늘의 매수/매도 신호 종목 리스트
+/                  메인 대시보드 — 오늘의 매수 신호 종목 리스트 (prob 순위 기준 상위 20개)
 /stock/{ticker}    종목 상세 — TradingView 차트 + 예측 신호 오버레이
 /backtest          백테스트 리포트 — 수익 곡선, 성과 지표 테이블
 /portfolio         포트폴리오 — 현재 보유 포지션 및 수익률 추적
