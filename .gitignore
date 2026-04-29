@@ -1,2 +1,66 @@
+# 환경 변수 (시크릿 포함)
 .env
+
+# 데이터 디렉토리 (대용량 파일)
 data/
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+# 테스트 캐시 및 커버리지
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ML 모델 파일
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+*.xgb
+*.cbm
+models/saved/
+
+# 로그 파일
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# 가상환경
+venv/
+.venv/
+env/
+.env/
+
+# 패키징
+dist/
+build/
+*.egg-info/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Airflow
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow/dags/__pycache__/
+airflow.cfg
+airflow.db
+webserver_config.py
