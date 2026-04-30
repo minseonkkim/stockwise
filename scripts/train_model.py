@@ -150,10 +150,20 @@ def main():
         ensemble.train(X_train, y_train, X_valid, y_valid, xgb_params=best_params)
         ensemble.save("ensemble")
 
+        import numpy as _np
+
+        class _EnsembleWrapper:
+            def predict(self, X):
+                p = ensemble.predict_proba(X)
+                return (p >= 0.5).astype(int)
+
+            def predict_proba(self, X):
+                p = ensemble.predict_proba(X)
+                return _np.column_stack([1 - p, p])
+
         evaluator3 = ModelEvaluator()
         evaluator3.evaluate_all(
-            type("_M", (), {"predict": lambda s, X: (ensemble.predict_proba(X) >= 0.5).astype(int),
-                            "predict_proba": lambda s, X: ensemble.predict_proba(X).reshape(-1,1)})(),
+            _EnsembleWrapper(),
             X_train, y_train, X_valid, y_valid, X_test, y_test,
             threshold=args.threshold,
         )
