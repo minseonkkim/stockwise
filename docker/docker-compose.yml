@@ -99,6 +99,63 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
+  # ── FastAPI (Phase 5) ────────────────────────────────────────
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: trade_api
+    restart: unless-stopped
+    env_file: ../.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data:ro
+      - ../src:/app/src:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── Celery Worker (Phase 5) ──────────────────────────────────
+  celery-worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: trade_celery_worker
+    restart: unless-stopped
+    env_file: ../.env
+    command: celery -A src.tasks.pipeline worker --loglevel=info
+    volumes:
+      - ../data:/app/data
+      - ../src:/app/src:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # ── Celery Beat / 스케줄러 (Phase 5) ────────────────────────
+  celery-beat:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: trade_celery_beat
+    restart: unless-stopped
+    env_file: ../.env
+    command: celery -A src.tasks.pipeline beat --loglevel=info
+    volumes:
+      - ../data:/app/data
+      - ../src:/app/src:ro
+    depends_on:
+      - celery-worker
+
 volumes:
   postgres_data:
   airflow_logs:

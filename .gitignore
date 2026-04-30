@@ -64,3 +64,24 @@ airflow/dags/__pycache__/
 airflow.cfg
 airflow.db
 webserver_config.py
+
+# Airflow standalone
+standalone_admin_password.txt
+
+# Docker 볼륨 / 빌드 캐시
+docker/postgres_data/
+docker/.env
+
+# claude
+.claude/
+
+# ── Phase 5: Next.js ────────────────────────────────────────
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+frontend/.env.local
+frontend/.env.*.local
+
+# ── Phase 5: FastAPI / Celery ────────────────────────────────
+celerybeat-schedule
+celerybeat.pid

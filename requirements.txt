@@ -39,3 +39,8 @@ shap==0.46.0
 # Phase 4
 quantstats
 matplotlib
+
+# Phase 5 — API & 대시보드
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+httpx==0.28.1
