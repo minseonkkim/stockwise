@@ -44,16 +44,16 @@ def get_equity_curve():
             detail="run_backtest.py 를 먼저 실행하세요.",
         )
     df = pd.read_csv(path, parse_dates=[0])
-    df.columns = ["date", "return"]
+    df.columns = ["date", "ret"]
     df = df.dropna()
 
     # 누적 수익률
-    df["equity"] = (1 + df["return"]).cumprod()
+    df["equity"] = (1 + df["ret"]).cumprod()
 
     rows = [
         {
             "date": row.date.strftime("%Y-%m-%d"),
-            "daily_return": round(float(row["return"]), 6),
+            "daily_return": round(float(row.ret), 6),
             "equity": round(float(row.equity), 6),
         }
         for row in df.itertuples()
