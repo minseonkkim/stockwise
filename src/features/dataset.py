@@ -17,10 +17,11 @@ from sklearn.preprocessing import StandardScaler
 
 from src.features.chart_features import CHART_FEATURE_COLS
 from src.features.quant_features import QUANT_FEATURE_COLS
+from src.features.sector_features import SECTOR_FEATURE_COLS
 from src.utils import logger
 
 FEATURES_DIR = Path("data/features")
-ALL_FEATURE_COLS = CHART_FEATURE_COLS + QUANT_FEATURE_COLS
+ALL_FEATURE_COLS = CHART_FEATURE_COLS + QUANT_FEATURE_COLS + SECTOR_FEATURE_COLS
 
 TRAIN_END  = "2021-01-01"
 VALID_END  = "2023-01-01"

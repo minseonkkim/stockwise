@@ -21,6 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.features.dataset import load_dataset
+from src.models.ensemble import EnsembleTrainer
 from src.models.evaluator import ModelEvaluator
 from src.models.explainer import SHAPExplainer
 from src.models.trainer import XGBoostTrainer
@@ -35,6 +36,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-shap", action="store_true", help="SHAP 분석 건너뜀")
     parser.add_argument("--retrain-after-shap", action="store_true",
                         help="SHAP 하위 피처 제거 후 재학습")
+    parser.add_argument("--ensemble", action="store_true",
+                        help="XGBoost + LightGBM 앙상블 학습 (data/models/ensemble_*.pkl 저장)")
     parser.add_argument("--model-name", type=str, default="xgb_model", help="저장할 모델 이름")
     parser.add_argument("--threshold", type=float, default=0.5, help="분류 임계값 (기본: 0.5)")
     parser.add_argument("--shap-samples", type=int, default=5000, help="SHAP 계산 샘플 수")
@@ -140,10 +143,31 @@ def main():
     else:
         logger.info("[5/5] SHAP 분석 건너뜀")
 
+    # ─── 6. 앙상블 학습 (선택) ──────────────────────────────────
+    if args.ensemble:
+        logger.info("[6] XGBoost + LightGBM 앙상블 학습 중...")
+        ensemble = EnsembleTrainer()
+        ensemble.train(X_train, y_train, X_valid, y_valid, xgb_params=best_params)
+        ensemble.save("ensemble")
+
+        evaluator3 = ModelEvaluator()
+        evaluator3.evaluate_all(
+            type("_M", (), {"predict": lambda s, X: (ensemble.predict_proba(X) >= 0.5).astype(int),
+                            "predict_proba": lambda s, X: ensemble.predict_proba(X).reshape(-1,1)})(),
+            X_train, y_train, X_valid, y_valid, X_test, y_test,
+            threshold=args.threshold,
+        )
+        evaluator3.save_report("evaluation_ensemble")
+        logger.info("[Ensemble] 학습 완료 → data/models/ensemble_*.pkl")
+        for split in ("valid", "test"):
+            print(f"[앙상블] {evaluator3.classification_report_str(split)}")
+
     logger.info("=" * 60)
     logger.info("Phase 3 완료")
-    logger.info(f"  모델: data/models/{args.model_name}.json")
+    logger.info(f"  모델: data/models/{args.model_name}.pkl")
     logger.info(f"  평가: data/reports/evaluation.json")
+    if args.ensemble:
+        logger.info("  앙상블: data/models/ensemble_*.pkl")
     logger.info("=" * 60)
 
 

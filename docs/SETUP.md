@@ -117,17 +117,22 @@ python scripts/build_features.py
 
 ```
 data/features/
-├── features_all.parquet   # 전체 피처 (~190만 행, 38개 피처)
+├── features_all.parquet   # 전체 피처 (~190만 행, 41개 피처)
 ├── train.parquet          # 2010 ~ 2020
 ├── valid.parquet          # 2021 ~ 2022
 ├── test.parquet           # 2023 ~ 현재
-└── scaler.pkl             # StandardScaler (train 기준 fit)
+├── scaler.pkl             # StandardScaler (train 기준 fit)
+└── sector_map.csv         # S&P 500 섹터 매핑 (캐시)
 ```
 
-특정 종목만 테스트하려면:
+주요 옵션:
 
 ```bash
+# 특정 종목만 테스트
 python scripts/build_features.py --tickers AAPL MSFT GOOGL
+
+# 섹터 피처 건너뜀 (오프라인 환경 등)
+python scripts/build_features.py --no-sector
 ```
 
 ---
@@ -164,6 +169,9 @@ python scripts/train_model.py --no-tune
 
 # SHAP 하위 피처(하위 10%) 제거 후 재학습
 python scripts/train_model.py --retrain-after-shap
+
+# XGBoost + LightGBM 앙상블 학습 (API가 자동으로 앙상블 사용)
+python scripts/train_model.py --ensemble
 ```
 
 성능 목표:
@@ -218,7 +226,32 @@ python scripts/run_backtest.py --capital 50000 --cost 0.002
 
 ---
 
-## 10. API 서버 실행 (Phase 5)
+## 10. Walk-forward 검증 (선택 — 모델 견고성 확인)
+
+```bash
+python scripts/validate_walkforward.py
+```
+
+3년 학습 / 6개월 검증 슬라이딩 윈도우로 시장 변화에 대한 모델 안정성을 측정합니다.
+
+```bash
+# 빠른 실행 (Optuna 튜닝 생략)
+python scripts/validate_walkforward.py --no-tune
+
+# 윈도우 크기 조정
+python scripts/validate_walkforward.py --train-years 2 --valid-months 3
+```
+
+완료 후 생성 파일: `data/reports/walkforward_results.csv`
+
+판정 기준:
+- **PASS**: 윈도우 평균 정확도 55%↑ & 표준편차 3%↓
+- **PARTIAL**: 평균은 달성했지만 윈도우간 편차 큼
+- **FAIL**: 평균 정확도 55% 미달 (피처 보강 필요)
+
+---
+
+## 11. API 서버 실행 (Phase 5)
 
 Phase 7 ~ 9 (피처 빌드, 모델 학습, 백테스트)가 완료된 후 실행합니다.
 
@@ -257,7 +290,7 @@ python scripts/run_api.py --port 8080
 
 ---
 
-## 11. 프론트엔드 실행 (Phase 5)
+## 12. 프론트엔드 실행 (Phase 5)
 
 ```bash
 cd frontend
@@ -286,7 +319,7 @@ npm start
 
 ---
 
-## 12. Docker로 전체 스택 실행 (Phase 5 통합)
+## 13. Docker로 전체 스택 실행 (Phase 5 통합)
 
 DB, Redis, Airflow, FastAPI, Celery를 한 번에 실행:
 
@@ -314,7 +347,7 @@ docker compose up -d db redis api
 
 ---
 
-## 13. Celery 일별 파이프라인 (Phase 5 자동화)
+## 14. Celery 일별 파이프라인 (Phase 5 자동화)
 
 로컬에서 수동으로 Celery worker와 scheduler를 실행:
 
@@ -341,7 +374,7 @@ docker compose up -d celery-worker celery-beat
 
 ---
 
-## 14. 테스트 실행
+## 15. 테스트 실행
 
 ```bash
 pytest tests/ -v
@@ -404,7 +437,7 @@ stockwise/
 
 ---
 
-## 피처 목록 (Phase 2 — 총 38개)
+## 피처 목록 (총 41개)
 
 | 구분      | 피처                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------ |
@@ -416,6 +449,7 @@ stockwise/
 | 변동성    | bb_pct_b, bb_width, atr_14, volatility_20                                                                    |
 | 가격파생  | return_5d, return_20d, return_60d, price_vs_ma20, price_vs_ma60                                              |
 | 거래량    | volume_ratio_20, obv_trend, volume_surge                                                                     |
+| 섹터강도  | sector_return_20d, sector_rel_strength, sector_rank_pct                                                      |
 
 ---
 

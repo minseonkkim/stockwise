@@ -23,19 +23,28 @@ def get_predictions_df() -> pd.DataFrame:
     """
     # ── 1. 피처 & 모델 로드 ──────────────────────────────────────
     feature_cols_path = FEATURES_DIR / "feature_cols.pkl"
-    model_path = MODELS_DIR / "xgb_model.pkl"
 
     if not feature_cols_path.exists():
         raise FileNotFoundError("build_features.py 를 먼저 실행하세요.")
-    if not model_path.exists():
-        raise FileNotFoundError("train_model.py 를 먼저 실행하세요.")
 
     with open(feature_cols_path, "rb") as f:
         feature_cols: list[str] = pickle.load(f)
 
-    with open(model_path, "rb") as f:
-        data = pickle.load(f)
-    model = data["model"]
+    # 앙상블 모델 우선 사용, 없으면 XGBoost 단독 사용
+    ensemble_meta = MODELS_DIR / "ensemble_meta.pkl"
+    xgb_path = MODELS_DIR / "xgb_model.pkl"
+
+    if ensemble_meta.exists():
+        from src.models.ensemble import EnsembleTrainer
+        predictor = EnsembleTrainer.load("ensemble")
+        predict_fn = predictor.predict_proba
+    elif xgb_path.exists():
+        with open(xgb_path, "rb") as f:
+            data = pickle.load(f)
+        _model = data["model"]
+        predict_fn = lambda X: _model.predict_proba(X)[:, 1]
+    else:
+        raise FileNotFoundError("train_model.py 를 먼저 실행하세요.")
 
     # ── 2. test 파티션 로드 ───────────────────────────────────────
     test_path = FEATURES_DIR / "test.parquet"
@@ -49,7 +58,7 @@ def get_predictions_df() -> pd.DataFrame:
     X = df[available].fillna(0).replace([float("inf"), float("-inf")], 0)
 
     # ── 3. 예측 ──────────────────────────────────────────────────
-    df["prob"] = model.predict_proba(X)[:, 1]
+    df["prob"] = predict_fn(X)
 
     # ── 4. 날짜별 Top-N 신호 분류 (PLAN.md Phase 5 명시 방식) ────
     df = df.sort_values(["date", "prob"], ascending=[True, False])
